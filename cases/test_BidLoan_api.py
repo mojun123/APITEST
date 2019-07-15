@@ -61,7 +61,7 @@ class TestBidLoanApi(Base):
         login.login_api(method='post',
                         url=do_conf('URL', 'Host_Url') + '/member/login',
                         data={"mobilephone": str(do_user('Invest', 'mobilephone')),
-                              "pwd": (do_user('Invest', 'pwd'))}
+                              "pwd": (A('Invest', 'pwd'))}
                         )
 
     @data(*test_data)

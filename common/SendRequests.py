@@ -41,6 +41,7 @@ class HttpRequests(object):
             raise ValueError('request method "{}" error ! please check'.format(method))
         return response
 
+    # 类的实例 + 括号的时候 回自动调用这个函数request()用这个
     def __call__(self, method, url, params_type='form', data=None, **kwargs):
         return self.send_request(method, url,
                                  params_type=params_type,
