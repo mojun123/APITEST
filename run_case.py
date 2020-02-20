@@ -23,6 +23,7 @@ def create_user_info_config_file(filename):
         register.create_uer_info()
 
 
+
 def tc_suite():
     """测试套件"""
     discover = unittest.defaultTestLoader.discover(CASE_DIR, 'test_*.py')

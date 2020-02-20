@@ -108,6 +108,7 @@ class DataReplace(object):
     @classmethod
     def replace_exist_loan_id(cls, data):
         exist_loan_id = getattr(DataReplace, 'loan_id')
+        log.info(exist_loan_id)
         data = cls.re_replace(cls.pattern_exist_loan_id, exist_loan_id, data)
         return data
 
@@ -161,7 +162,9 @@ class DataReplace(object):
     def register_login_parameters_data(cls, not_exist_phone, data):
         """注册与登录参数化"""
         data = cls.replace_not_exist_phone(not_exist_phone, data)
+        log.info("data的值为{}".format(data))
         data = cls.replace_exist_phone(data)
+        log.info("data的值为{}".format(data))
         return data
 
     @classmethod
@@ -193,6 +196,8 @@ class DataReplace(object):
         return data
 
 
+
+
 register_login_parameters = getattr(DataReplace, 'register_login_parameters_data')
 recharge_parameters = getattr(DataReplace, 'recharge_parameters_data')
 add_parameters = getattr(DataReplace, 'add_parameters_data')
@@ -201,11 +206,20 @@ invest_parameters = getattr(DataReplace, 'invest_parameters_data')
 if __name__ == '__main__':
     source_str_phone = '{"mobilephone": ${not_exist_phone}, "pwd": "123456"}'
     data_phone = '{"mobilephone": ${exist_phone}, "pwd": "123456"}'
-    invest_phone = '{"mobilephone": ${Invest}, "pwd": "123456"}'
-    print(DataReplace.register_login_parameters_data('1391111111', invest_phone))
-    setattr(DataReplace, 'loan_id', '123456')
-    setattr(DataReplace, 'non_exist_member_id', '654321')
-    setattr(DataReplace, 'not_exist_loan_id', '242434')
-    value = '{"memberId":"${invest_memberID}", "pwd": [123456], "loanId": "${loanID}","amount":"${amount}"}'
-    new_value = DataReplace.invest_parameters_data(value)
-    print(new_value)
+    invest_phone = '{"   ": ${Invest}, "pwd": "123456"}'
+    # print(DataReplace.register_login_parameters_data('1391111111',source_str_phone ))
+    # print(DataReplace.register_login_parameters_data('15752091347',invest_phone))
+    print(DataReplace.register_login_parameters_data('15752091347',data_phone))
+    # setattr(DataReplace, 'loan_id', '123456')
+    # setattr(DataReplace, 'non_exist_member_id', '654321')
+    # setattr(DataReplace, 'not_exist_loan_id', '242434')
+    # value = '{"memberId":"${invest_memberID}", "pwd": [123456], "loanId": "${loanID}","amount":"${amount}"}'
+    # new_value = DataReplace.invest_parameters_data(value)
+    # print(new_value)
+    # ar = DataReplace()
+    # a =  ar.pattern_not_exist_phone
+    # b = "12345678"
+    # source = '{"mobilephone": "${not_exist_phone}", "pwd": "123456"}'
+    # print(ar.re_replace(a,b,source))
+    print(DataReplace.replace_exist_loan_id(data_phone))
+

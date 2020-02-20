@@ -34,7 +34,7 @@ class ParseExcel(object):
         """获取最大列号"""
         max_column = self.__wb[sheet_name].max_column
         return max_column
-
+    # coordinate 为单元格的格式列如：A5
     def get_cell_value(self, sheet_name, coordinate=None, row=None, column=None):
         """获取指定单元格的数据"""
         if coordinate is not None:
@@ -134,25 +134,29 @@ do_excel = ParseExcel(DATA_PATH)
 
 if __name__ == '__main__':
     pe = ParseExcel(DATA_PATH)
-    print(pe.get_all_value('login'))
-    pe.get_name_tuple_all_value('login')
-    column_row = pe.get_max_column_num('login')
-    print('最大列号:', column_row)
-    max_row = pe.get_max_row_num('login')
-    print('最大行号:', max_row)
-    cell_value_1 = pe.get_cell_value('login', row=2, column=3)
-    print('第%d行, 第%d列的数据为: %s' % (2, 3, cell_value_1))
-    cell_value_2 = pe.get_cell_value('login', coordinate='A5')
-    print('A5单元格的数据为: {}'.format(cell_value_2))
-    value_row = pe.get_row_value('login', 3)
-    print('第{}行的数据为:{}'.format(3, value_row))
-    value_column = pe.get_column_value('login', 2)
-    print('第{}列的数据为:{}'.format(2, value_column))
-    values_2 = pe.get_all_value('login')
-    print('第二种方式获取所有数据\n', values_2)
-    title = pe.get_excel_title('login')
-    print('表头为\n{}'.format(title))
-    dict_value = pe.get_list_dict_all_value('login')
-    print('所有数据组成的嵌套字典的列表:\n', dict_value)
-    namedtuple_value = pe.get_list_dict_all_value('login')
-    print('所有数据组成的嵌套命名元组的列表:\n', namedtuple_value)
+    # print(pe.get_all_value('login'))
+    # pe.get_name_tuple_all_value('login')
+    # column_row = pe.get_max_column_num('login')
+    # print('最大列号:', column_row)
+    # max_row = pe.get_max_row_num('login')
+    # print('最大行号:', max_row)
+    # cell_value_1 = pe.get_cell_value('login', row=2, column=3)
+    # print('第%d行, 第%d列的数据为: %s' % (2, 3, cell_value_1))
+    # cell_value_2 = pe.get_cell_value('login', coordinate='A5')
+    # print('A5单元格的数据为: {}'.format(cell_value_2))
+    # value_row = pe.get_row_value('login', 3)
+    # print('第{}行的数据为:{}'.format(3, value_row))
+    # value_column = pe.get_column_value('login', 2)
+    # print('第{}列的数据为:{}'.format(2, value_column))
+    # values_2 = pe.get_all_value('login')
+    # print('第二种方式获取所有数据\n', values_2)
+    # title = pe.get_excel_title('login')
+    # print('表头为\n{}'.format(title))
+    # dict_value = pe.get_list_dict_all_value('login')
+    # print('所有数据组成的嵌套字典的列表:\n', dict_value)
+    # namedtuple_value = pe.get_list_dict_all_value('login')
+    # print('所有数据组成的嵌套命名元组的列表:\n', namedtuple_value)
+    a = pe.get_name_tuple_all_value("login")
+    b = a[0][4]
+    print(a)
+    print(type(b))

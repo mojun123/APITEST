@@ -1,0 +1,21 @@
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:20]-INFO-[日志信息]: 开始解析配置文件...
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:20]-INFO-[日志信息]: 开始解析配置文件...
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Non_exist_phone信息为\$\{not_exist_phone\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Existed_phone信息为\$\{exist_phone\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Invest_phone信息为\$\{Invest\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析NoLogin_phone信息为\$\{no_login}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Existed_member_id信息为\$\{loan\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Non_existed_member_id信息为\$\{not_exist_loan\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Exist_invest_member_id信息为\$\{invest_memberID\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Non_exist_invest_member_id信息为\$\{not_exist_inverst_memberID\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Exist_loan_id信息为\$\{loanID\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Non_exist_loan_id信息为\$\{not_exist_loanID\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Amount信息为\$\{amount\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Password信息为\$\{password\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Amount_not_enough信息为\$\{amount_not_enough\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:50]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\config.ini解析Remain_amount信息为\$\{remain_amount\}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-DataReplace.py-[line:50]-INFO-[日志信息]: 测试数据{"mobilephone": ${exist_phone}, "pwd": "123456"}通过正则匹配为: {"mobilephone": ${exist_phone}, "pwd": "123456"}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-DataReplace.py-[line:165]-INFO-[日志信息]: data的值为{"mobilephone": ${exist_phone}, "pwd": "123456"}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-ParseConfig.py-[line:35]-INFO-[日志信息]: 从配置文件D:\迁移文件\ApiAutoTest\config\userinfo.ini解析MobilePhone信息为15752091347
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-DataReplace.py-[line:50]-INFO-[日志信息]: 测试数据{"mobilephone": 15752091347, "pwd": "123456"}通过正则匹配为: {"mobilephone": 15752091347, "pwd": "123456"}
+Fri, 10 Jan 2020 09:36:03-common.RecordLog-DataReplace.py-[line:167]-INFO-[日志信息]: data的值为{"mobilephone": 15752091347, "pwd": "123456"}

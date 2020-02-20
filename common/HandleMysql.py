@@ -43,10 +43,10 @@ class HandleMysql(object):
                 self._conn.commit()
                 if isinstance(is_all, bool):
                     if is_all:
-                        values = self._cursor.fetchall()
+                        values = self._cursor.fetchall()#一条数据
                         log.info("拉取数据库部分数据：\n{}".format(values[0]))
                     else:
-                        values = self._cursor.fetchone()
+                        values = self._cursor.fetchone()#多条数据
                         log.info("拉取数据库数据：\n{}".format(values))
                     return values
                 else:
